@@ -6,7 +6,7 @@ import Header from './header';
 class Marketo extends React.Component {
   render() {
     return(
-      <div>
+      <div className="wrapper">
         <Header />
       </div>
     )

@@ -1,0 +1,44 @@
+header {
+  background-color: rgb(138, 111, 176);
+  height: 300px;
+  padding-top: 1em;
+}
+
+nav {
+  max-width: 1024px;
+  margin: auto;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'museo-sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Nimbus Sans L', Arial, sans-serif;
+}
+
+nav section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 100%;
+}
+
+.search-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: white;
+}
+
+.search-login a {
+  color: white;
+  padding: 0 1em;
+  font-size: 0.75em;
+}
+
+.menu a {
+  color: white;
+  font-size: 0.9em;
+  padding: 1em 2em;
+}

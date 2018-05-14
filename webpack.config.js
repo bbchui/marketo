@@ -18,6 +18,10 @@ module.exports = {
             presets: ['env', 'react']
           }
         },
+      },
+      {
+        test: /\.png$/,
+        use: 'file-loader'
       }
     ]
   },
