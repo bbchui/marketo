@@ -113,7 +113,7 @@ a.view-demo {
   color: white;
 }
 
-section.fundamentals {
+section.header-titles {
   width: 500px;
   margin: auto;
   display: flex;
@@ -122,22 +122,51 @@ section.fundamentals {
   justify-content: space-around;
 }
 
-.fundamentals h2 {
+.header-titles h2 {
   font-size: 1.1em;
   color: white;
   text-transform: uppercase;
   padding: 1em;
 }
 
-.fundamentals h1 {
+.header-titles h1 {
   font-size: 2.2em;
   color: white;
   font-weight: 600;
   padding-bottom: 0.75em;
 }
 
-.fundamentals p {
+.header-titles p {
   color: white;
   text-align: center;
   line-height: 1.5;
+}
+
+/* fundamentals component css section */
+section.fundamentals {
+  margin: 2em auto;
+  width: 950px;
+}
+
+.scroll-image {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 2em auto;
+  background: #f3f3f3;
+  padding: 1em;
+}
+
+figure {
+  width: 97%;
+  margin: auto;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure p {
+  margin-top: 3em;
+  font-size: 0.9em;
 }

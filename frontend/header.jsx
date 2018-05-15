@@ -32,7 +32,7 @@ class Header extends React.Component {
             </div>
           </section>
         </nav>
-        <section className="fundamentals">
+        <section className="header-titles">
           <h2>Marketo University</h2>
           <h1>Fundamentals</h1>
           <p>Learn valuable digital engagement concepts from passionate thought leaders dedicated to your success.</p>
