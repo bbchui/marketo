@@ -1,4 +1,10 @@
 import React from 'react';
+import FaFacebook from 'react-icons/lib/fa/facebook';
+import FaTwitter from 'react-icons/lib/fa/twitter';
+import FaLinkedin from 'react-icons/lib/fa/linkedin';
+
+const vert = {verticalAlign: 'text-bottom',
+              fontSize: '1.1em'};
 
 class Footer extends React.Component {
   constructor(props) {
@@ -73,6 +79,39 @@ class Footer extends React.Component {
             <a href='#japanese'>日本（日本語)</a>
           </li>
         </ul>
+
+        <section className="footer-2">
+          <div className="additional">
+            <article>
+              <p>Recent searches. Direct Lead Generation, Internet Marketing Promotion, Lead Generation Online, Lead Generation Business Plan, B2B Lead Generation Companies, Education Lead Generation, Advertising Marketing Strategy, Effective Lead Nurturing, Sale Lead Generation, Email Marketing Platform</p>
+              <p>Copyright 2017, Marketo, Inc. All rights reserved.
+              <a href="legal">Legal</a> |
+              <a href="privacy">Privacy</a> |
+              <a href="cookies">Cookies</a> |
+              <a href="eusa">EUSA</a> |
+              <a href="trust-marketo">Trust.Marketo.com</a>
+              </p>
+            </article>
+            <ul className="social-icons">
+              <li>
+                <a href="https://www.facebook.com/Marketo" target="_blank">
+                  <FaFacebook className="icon" style={vert}/>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/Marketo" target="_blank">
+                  <FaTwitter className="icon" style={vert}/>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/236175" target="_blank">
+                  <FaLinkedin className="icon" style={vert}/>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </section>
       </footer>
     )
   }
