@@ -17,6 +17,15 @@ class Fundamentals extends React.Component {
     this.prevImage = this.prevImage.bind(this);
   }
 
+  // if num < 4 {
+  //   let newState = Object.assign(this.state);
+  //
+  //   newState[num] = 'active';
+  //   newState[num + 1] = 'active focus'
+  //
+  //   this.setState(newState);
+  // }
+
   nextImage(e) {
     e.preventDefault();
     let num = this.state.img_number
@@ -58,6 +67,8 @@ class Fundamentals extends React.Component {
                   });
     }
   }
+
+  // Create a new Figure component and pass image url and text blurb as props
 
   showImage() {
     switch(this.state.img_number) {
