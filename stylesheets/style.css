@@ -1,12 +1,15 @@
 header {
-  background-color: rgb(138, 111, 176);
-  height: 300px;
-  padding-top: 1em;
+  background-color: rgb(75, 15, 152);
+  height: 325px;
+  padding-top: 0.75em;
+  display: flex;
+  flex-direction: column;
 }
+/* desktop header size */
 
 nav {
-  max-width: 1024px;
-  margin: auto;
+  width: 950px;
+  margin: 0 auto;
   height: 75px;
   display: flex;
   flex-direction: row;
@@ -17,10 +20,11 @@ nav {
 nav section {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logo {
+  display: block;
   height: 100%;
 }
 
@@ -29,16 +33,111 @@ nav section {
   flex-direction: row;
   justify-content: flex-end;
   color: white;
+  align-items: center;
+  padding-top: 0.5em;
 }
 
 .search-login a {
   color: white;
-  padding: 0 1em;
+  padding: 0 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  transition: transform 1s ease;
+}
+
+.search-login a:nth-child(1):hover {
+  transform: rotateY(360deg);
+  transition: transform 1s ease;
+}
+
+.search-login a:nth-child(2) {
+  border-left: 2px solid #6F42AC;
+  line-height: 2em;
   font-size: 0.75em;
+}
+
+.search-login a:nth-child(2)::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: white;
+  display: block;
+  transition: width .3s;
+  margin-top: -3px;
+}
+
+.search-login a:nth-child(2):hover::after {
+  width: 100%;
+  transition: width .3s;
+  color: white;
+}
+
+.menu {
+  padding-top: 1em;
+  display: flex;
 }
 
 .menu a {
   color: white;
   font-size: 0.9em;
-  padding: 1em 2em;
+  margin: 0 1.5em;
+  padding: 0.7em 0;
+  display: inline-block;
+}
+
+a.view-demo {
+  background: #4CEBDB;
+  color: black;
+  font-weight: bold;
+  padding: 0.6em 1.3em;
+  align-self: center;
+}
+
+.play-circle {
+  font-size: 1.25em;
+}
+
+.menu-item::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  background: white;
+  display: block;
+  transition: width .3s;
+  margin-top: 1em;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+  transition: width .3s;
+  color: white;
+}
+
+section.fundamentals {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fundamentals h2 {
+  font-size: 1.1em;
+  color: white;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+.fundamentals h1 {
+  font-size: 2.2em;
+  color: white;
+  font-weight: 600;
+  padding-bottom: 0.75em;
+}
+
+.fundamentals p {
+  color: white;
+  text-align: center;
+  line-height: 1.5;
 }
