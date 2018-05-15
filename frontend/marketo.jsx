@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './header';
-import Fundamentals from './fundamentals'
+import Fundamentals from './fundamentals';
+import Footer from './footer';
 
 class Marketo extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class Marketo extends React.Component {
       <div className="wrapper">
         <Header />
         <Fundamentals />
+        <Footer />
       </div>
     )
   }

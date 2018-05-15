@@ -269,3 +269,79 @@ figure p {
   font-size: 0.8em;
   font-weight: 600;
 }
+
+/* footer css section */
+footer {
+  background-color: #110131;
+}
+
+footer ul {
+  width: 950px;
+  margin: 0 auto;
+  padding: 4em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul li * {
+  color: white;
+}
+
+ul li>a, ul li>p {
+  font-size: 0.7em;
+  color: #b7b3c0;
+  line-height: 2;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+ul li h4 {
+  font-size: 0.7em;
+  line-height: 2;
+  color: #b7b3c0;
+}
+
+ul li h3 {
+  font-size: 0.9em;
+  line-height: 1.2;
+  padding-bottom: 0.75em;
+}
+
+.separate {
+  padding-top: 1em;
+}
+
+.languages {
+  padding-top: 2em;
+}
+
+.corner {
+  position: relative;
+}
+
+span.corner {
+  color: #b7b3c0;
+}
+
+.corner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -15px;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.corner::after {
+    border-width: 0.3em;
+    border-right-color: #f32a6c;
+    border-top-color: #f32a6c;
+}
