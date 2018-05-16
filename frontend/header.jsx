@@ -6,13 +6,13 @@ import * as Icons from "@fortawesome/fontawesome-free-solid";
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {visible: ''};
+    this.state = {visible: '',
+                  extra: 'extra'};
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
     let wrapper = document.getElementById('wrapper');
-    console.log(wrapper);
     if (this.state.visible === '') {
       this.setState({visible: 'visible'});
       wrapper.className += " pushed"
@@ -41,18 +41,19 @@ class Header extends React.Component {
               <a href="#my_resources" className="menu-item">My Resources</a>
               <a href="#why_marketo" className="menu-item">Why Marketo</a>
               <a href="#view-demo" className="view-demo">VIEW DEMO <FontAwesomeIcon icon="play-circle" className="play-circle"/></a>
+              <a className={this.state.extra} href="#login">Login</a>
+              <a className={this.state.extra} href="#contact">Contact</a>
 
-              <div id="sidebar-btn" onClick={this.handleClick}>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
             </div>
           </section>
-
+          <div id="sidebar-btn" onClick={this.handleClick}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
         <section className="header-titles">
-          <h2>Marketo University</h2>
+          <h2 className="extra2">Marketo University</h2>
           <h1>Fundamentals</h1>
           <p>Learn valuable digital engagement concepts from passionate thought leaders dedicated to your success.</p>
         </section>

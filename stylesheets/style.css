@@ -95,10 +95,15 @@ nav section {
 
 a.view-demo {
   background: #4CEBDB;
+  transition: background 0.5s ease;
   color: black;
   font-weight: bold;
   padding: 0.6em 1.3em;
   align-self: center;
+}
+a.view-demo:hover {
+  background: #44d7c8;
+  transition: background 0.5s ease;
 }
 
 .play-circle {
@@ -154,6 +159,10 @@ section.header-titles {
 section.fundamentals {
   margin: 2em auto;
   width: 940px;
+}
+
+.fundamentals a {
+  color: #4a0f96;
 }
 
 .scroll-image {
@@ -312,7 +321,7 @@ footer {
 footer ul {
   width: 940px;
   margin: 0 auto;
-  padding: 5em 0;
+  padding: 5em 0 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -542,24 +551,13 @@ span.date {
   line-height: 1.2;
 }
 
-/* media query less than 940px */
-label {
-  margin: 0 15px 0 0;
-  font-size: 26px;
-  line-height: 45px;
+/* header media query */
+a.extra {
   display: none;
-  float: right;
-  color: black;
-  transition: color 0.3s ease;
 }
 
-label:hover {
-  color: #82e2d2;
-  transition: color 0.3s ease;
-}
-
-#toggle {
-  display: none;
+.extra2 {
+  display: block;
 }
 
 .added {
@@ -576,10 +574,10 @@ label:hover {
     cursor: pointer;
   }
   nav {
-    width: 100%;
+    width: 95%;
   }
   #sidebar {
-    background: black;
+    background: #584a75;
     width: 200px;
     height: 100%;
     display: block;
@@ -598,17 +596,16 @@ label:hover {
   #sidebar-btn {
     display: inline-block;
     vertical-align: middle;
-    width: 20px;
+    width: 25px;
     height: 15px;
     cursor: pointer;
     margin: 20px;
     position: absolute;
     top: 0;
-    left: -60px;
-    /* color: white; */
+    right: 0;
   }
   #sidebar-btn span {
-    height: 1px;
+    height: 4px;
     background: white;
     margin-bottom: 5px;
     display: block;
@@ -616,6 +613,47 @@ label:hover {
   .pushed {
     left: -200px;
     transition: left 0.3s linear;
+  }
+  .menu a {
+    display: block;
+    border-top: 1px solid #867c9c;
+    border-bottom: 1px solid #867c9c;
+    width: 200px;
+    padding: 2em 1.5em;
+    margin: 0;
+  }
+  .menu a::after {
+    display: none;
+  }
+  .menu a:hover {
+    text-decoration: underline;
+  }
+  .menu a:nth-child(1) {
+    margin-top: 4em;
+  }
+  a.view-demo {
+    background: transparent;
+    font-weight: normal;
+    color: white;
+    border-bottom: 1px solid #867c9c;
+  }
+  a.view-demo:hover {
+    background: transparent;
+  }
+  section.header-titles {
+    width: 90%;
+    margin: auto;
+    padding: 3em 0;
+  }
+  header {
+    height: 100%;
+  }
+  .header-titles h1 {
+    font-size: 1.75em;
+  }
+  .header-titles p {
+    font-size: 1.1em;
+    line-height: 2;
   }
 }
 
@@ -706,6 +744,9 @@ label:hover {
     width: 100%;
     right: 0;
     bottom: 0;
+  }
+  .extra2 {
+    display: none;
   }
 }
 

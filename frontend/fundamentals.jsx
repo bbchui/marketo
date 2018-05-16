@@ -84,7 +84,7 @@ class Fundamentals extends React.Component {
         return(
           <figure>
             <img src={img2} />
-            <p>We take care of our employees—our Team Purple, celebrating their diverse backgrounds, perspectives, and opinions.</p>
+            <p>Posters had been a very beneficial marketing tool because it had paved to deliver an effective message that conveyed customer's attention. It had been widely used for acquiring customer's attention. Having them hanged with color prints had effectively grabbed customer's attention and it had resulted to end up gaining more customers and bossing up companies sales. We take care of our employees—our Team Purple, celebrating their diverse backgrounds, perspectives, and opinions.</p>
           </figure>
         );
       case 3:
@@ -107,7 +107,7 @@ class Fundamentals extends React.Component {
   render() {
     return(
       <section className="fundamentals">
-        <a href="/">Get Engaged / Marketo University / Training / Fundamentals</a>
+        <a href="#">Get Engaged / Marketo University / Training / Fundamentals</a>
         <div className="scroll-image">
           <ul className="progressbar">
             <li className={this.state.step_1}>Learn</li>
@@ -122,8 +122,6 @@ class Fundamentals extends React.Component {
             <button onClick={this.nextImage}>Next</button>
           </div>
         </div>
-
-
       </section>
     )
   }

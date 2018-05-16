@@ -113,7 +113,7 @@ class Footer extends React.Component {
           <div className="additional">
             <article>
               <p>Recent searches. Direct Lead Generation, Internet Marketing Promotion, Lead Generation Online, Lead Generation Business Plan, B2B Lead Generation Companies, Education Lead Generation, Advertising Marketing Strategy, Effective Lead Nurturing, Sale Lead Generation, Email Marketing Platform</p>
-              <p>Copyright 2017, Marketo, Inc. All rights reserved.
+              <p>© Copyright 2017, Marketo, Inc. All rights reserved.
               <a href="legal">Legal</a> |
               <a href="privacy">Privacy</a> |
               <a href="cookies">Cookies</a> |
