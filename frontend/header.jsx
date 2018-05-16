@@ -6,6 +6,20 @@ import * as Icons from "@fortawesome/fontawesome-free-solid";
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {visible: ''};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    let wrapper = document.getElementById('wrapper');
+    console.log(wrapper);
+    if (this.state.visible === '') {
+      this.setState({visible: 'visible'});
+      wrapper.className += " pushed"
+    } else {
+      this.setState({visible: ''});
+      wrapper.className = "wrapper"
+    }
   }
 
   render() {
@@ -22,15 +36,20 @@ class Header extends React.Component {
               </a>
               <a href="#login">LOGIN</a>
             </div>
-            <div className="menu">
+            <div className={'menu ' + this.state.visible} id="sidebar">
               <a href="#solutions" className="menu-item">Solutions</a>
               <a href="#my_resources" className="menu-item">My Resources</a>
               <a href="#why_marketo" className="menu-item">Why Marketo</a>
               <a href="#view-demo" className="view-demo">VIEW DEMO <FontAwesomeIcon icon="play-circle" className="play-circle"/></a>
+
+              <div id="sidebar-btn" onClick={this.handleClick}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </section>
-          <label for="toggle">{'\u2630'}</label>
-          <input type="checkbox" id="toggle"/>
+
         </nav>
         <section className="header-titles">
           <h2>Marketo University</h2>
