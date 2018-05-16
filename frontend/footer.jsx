@@ -2,18 +2,28 @@ import React from 'react';
 import FaFacebook from 'react-icons/lib/fa/facebook';
 import FaTwitter from 'react-icons/lib/fa/twitter';
 import FaLinkedin from 'react-icons/lib/fa/linkedin';
+import Contact from './contact';
 
 const vert = {verticalAlign: 'text-bottom',
               fontSize: '1.1em'};
 
 class Footer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {info: ''};
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll(e) {
+
   }
 
   render() {
     return(
-      <footer>
+      <footer id={this.props.id}>
         <ul>
           <li>
             <h3>Marketing <br/> headquarters</h3>
