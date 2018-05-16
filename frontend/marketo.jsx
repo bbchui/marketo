@@ -5,6 +5,7 @@ import Header from './header';
 import Fundamentals from './fundamentals';
 import Footer from './footer';
 import Contact from './contact';
+import Featured from './featured';
 
 class Marketo extends React.Component {
   constructor(props) {
@@ -17,11 +18,11 @@ class Marketo extends React.Component {
       let footer = document.getElementById('footer').offsetTop;
       let x = window.innerHeight;
       let y = window.pageYOffset;
-      
+
       if (x + y >= footer) {
-        this.setState({position: 'fixed'})
+        this.setState({position: 'fixed'});
       } else {
-        this.setState({position: 'position'})
+        this.setState({position: 'position'});
       }
     });
   }
@@ -31,8 +32,9 @@ class Marketo extends React.Component {
       <div className="wrapper">
         <Header />
         <Fundamentals />
-        <Contact id={this.state.position} />
+        <Featured />
         <Footer id="footer"/>
+        <Contact id={this.state.position} />
       </div>
     )
   }

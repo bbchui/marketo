@@ -8,13 +8,11 @@ class Header extends React.Component {
     super(props);
   }
 
-  // add active underline
-
   render() {
     return(
       <header>
         <nav>
-          <a className="logo" href="/home">
+          <a className="logo" href="#">
             <img className="logo" src={marketo_logo} />
           </a>
           <section>
