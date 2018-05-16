@@ -10,21 +10,29 @@ const vert = {verticalAlign: 'text-bottom',
 class Footer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {info: ''};
+    this.state = {position: 'position'};
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
-  }
+    window.addEventListener('scroll', () => {
+      let footer = document.getElementById('footer').offsetTop;
+      let x = window.innerHeight;
+      let y = window.pageYOffset;
 
-  handleScroll(e) {
+      if (x + y >= footer) {
+        this.setState({position: 'fixed'});
+      } else {
+        this.setState({position: 'position'});
+      }
+    });
 
   }
 
   render() {
     return(
       <footer id={this.props.id}>
-        <ul>
+        <Contact id={this.state.position}/>
+        <ul className="footer-1">
           <li>
             <h3>Marketing <br/> headquarters</h3>
             <p>901 Mariners Island Blvd.</p>
@@ -76,17 +84,28 @@ class Footer extends React.Component {
             <h4><a href='#trust'>Trust</a></h4>
           </li>
 
-          <li>
-            <h3><a href='#join-us'>Join Us</a></h3>
-            <a href='#careers'>Careers</a>
-            <a href='#investors'>Investor Relations</a>
+          <li className="footer-resize">
+            <div>
+              <h3><a href='#join-us'>Join Us</a></h3>
+              <a href='#careers'>Careers</a>
+              <a href='#investors'>Investor Relations</a>
+            </div>
 
-            <h3 className="languages"><a href='region'>Select Your Region</a></h3>
-            <a href='#dutch'>Deutschland (Deutsch)</a>
-            <a href='#french'>France (Français)</a>
-            <a href='#australia'>Australia (English)</a>
-            <a href='#uk'>United Kingdom (English)</a>
-            <a href='#japanese'>日本（日本語)</a>
+            <div className="added">
+              <h4><a href='#company'>Trust</a></h4>
+              <h4><a href='#resources'>Resources</a></h4>
+              <h4><a href='case-studies'>Case Studies</a></h4>
+              <h4>+1.877.260.6586</h4>
+            </div>
+
+            <div>
+              <h3 className="languages"><a href='region'>Select Your Region</a></h3>
+              <a href='#dutch'>Deutschland (Deutsch)</a>
+              <a href='#french'>France (Français)</a>
+              <a href='#australia'>Australia (English)</a>
+              <a href='#uk'>United Kingdom (English)</a>
+              <a href='#japanese'>日本（日本語)</a>
+            </div>
           </li>
         </ul>
 

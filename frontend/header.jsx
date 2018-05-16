@@ -29,13 +29,14 @@ class Header extends React.Component {
               <a href="#view-demo" className="view-demo">VIEW DEMO <FontAwesomeIcon icon="play-circle" className="play-circle"/></a>
             </div>
           </section>
+          <label for="toggle">{'\u2630'}</label>
+          <input type="checkbox" id="toggle"/>
         </nav>
         <section className="header-titles">
           <h2>Marketo University</h2>
           <h1>Fundamentals</h1>
           <p>Learn valuable digital engagement concepts from passionate thought leaders dedicated to your success.</p>
         </section>
-
       </header>
     )
   }

@@ -13,19 +13,19 @@ class Marketo extends React.Component {
     this.state = {position: 'position'};
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', () => {
-      let footer = document.getElementById('footer').offsetTop;
-      let x = window.innerHeight;
-      let y = window.pageYOffset;
-
-      if (x + y >= footer) {
-        this.setState({position: 'fixed'});
-      } else {
-        this.setState({position: 'position'});
-      }
-    });
-  }
+  // componentDidMount() {
+  //   window.addEventListener('scroll', () => {
+  //     let footer = document.getElementById('footer').offsetTop;
+  //     let x = window.innerHeight;
+  //     let y = window.pageYOffset;
+  //
+  //     if (x + y >= footer) {
+  //       this.setState({position: 'fixed'});
+  //     } else {
+  //       this.setState({position: 'position'});
+  //     }
+  //   });
+  // }
 
   render() {
     return(
@@ -34,7 +34,6 @@ class Marketo extends React.Component {
         <Fundamentals />
         <Featured />
         <Footer id="footer"/>
-        <Contact id={this.state.position} />
       </div>
     )
   }
