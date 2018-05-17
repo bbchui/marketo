@@ -324,7 +324,7 @@ footer ul {
   padding: 5em 0 1em;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 footer ul li, footer ul li div {
@@ -505,7 +505,7 @@ section#featured-stories {
 .featured-stories ul {
   display: flex;
   flex-direction: row;
-  width: 940px;
+  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -573,8 +573,14 @@ a.extra {
     display: block;
     cursor: pointer;
   }
+  header {
+    padding: 0;
+  }
   nav {
-    width: 95%;
+    width: 100%;
+    height: 10vh;
+    transition: background 0.5s ease;
+    z-index: 10;
   }
   #sidebar {
     background: #584a75;
@@ -602,7 +608,7 @@ a.extra {
     margin: 20px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 200px;
   }
   #sidebar-btn span {
     height: 4px;
@@ -628,9 +634,6 @@ a.extra {
   .menu a:hover {
     text-decoration: underline;
   }
-  .menu a:nth-child(1) {
-    margin-top: 4em;
-  }
   a.view-demo {
     background: transparent;
     font-weight: normal;
@@ -654,6 +657,24 @@ a.extra {
   .header-titles p {
     font-size: 1.1em;
     line-height: 2;
+  }
+  #extra-logo img {
+    width: 75px;
+    height: 50px;
+    padding-left: 120px
+  }
+  #extra-logo {
+    border-top: none;
+    padding: 0;
+    width: 100%;
+  }
+  .scrolled {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #584a75;
+    height: 10vh;
+    transition: background 0.5s ease;
   }
 }
 
@@ -757,9 +778,10 @@ a.extra {
     padding: 3em 0 5em;
   }
   .featured-stories ul {
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100%; */
+    justify-content: space-evenly;
   }
   .featured-stories ul li {
     max-width: 300px;
@@ -807,6 +829,9 @@ a.extra {
   .next-steps button {
     padding: 0;
     text-decoration: none;
+  }
+  .next-steps button:hover {
+    text-decoration: underline;
   }
 }
 
